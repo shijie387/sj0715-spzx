@@ -41,6 +41,7 @@
         <lombok.version>1.18.30</lombok.version>
         <redisson.version>3.23.3</redisson.version>
         <alipay.version>4.8.73.ALL</alipay.version>
+        <freemaker.version>2.3.32</freemaker.version>
     </properties>
 
     <!-- 依赖声明 -->
@@ -205,6 +206,18 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.freemarker</groupId>
+                <artifactId>freemarker</artifactId>
+                <version>${freemaker.version}</version>
             </dependency>
 
             <!-- lombok -->

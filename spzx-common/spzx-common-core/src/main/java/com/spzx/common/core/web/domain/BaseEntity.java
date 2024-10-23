@@ -5,19 +5,18 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableLogic;
+import com.baomidou.mybatisplus.annotation.*;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.Data;
 
 /**
  * Entity基类
  *
  * @author spzx
  */
+@Data
 public class BaseEntity implements Serializable
 {
     private static final long serialVersionUID = 1L;
@@ -53,9 +52,9 @@ public class BaseEntity implements Serializable
     /** 请求参数 */
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     @TableField(exist = false)
-    private Map<String, Object> params;
+    private Map<String, Object> params = new HashMap<>();
 
-    public Long getId() {
+   /* public Long getId() {
         return id;
     }
 
@@ -143,5 +142,5 @@ public class BaseEntity implements Serializable
     public void setParams(Map<String, Object> params)
     {
         this.params = params;
-    }
+    }*/
 }
